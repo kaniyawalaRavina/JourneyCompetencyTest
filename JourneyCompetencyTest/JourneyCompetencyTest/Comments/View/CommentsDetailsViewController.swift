@@ -44,9 +44,7 @@ class CommentsDetailsViewController: UIViewController, UITextFieldDelegate {
         //Search based on username and commented words
         filterComments = searchTextField.text?.isEmpty ?? true ? comments : comments.filter {
             $0?.name?.range(of: searchTextField.text ?? "", options: .caseInsensitive) != nil || $0?.body?.range(of: searchTextField.text ?? "", options: .caseInsensitive) != nil
-            
         }
-        print("comments count: \(filterComments.count)")
         tableView.reloadData()
     }
 }
@@ -88,7 +86,6 @@ extension CommentsDetailsViewController : UITableViewDelegate, UITableViewDataSo
             var indexedComment: Comments?
             if isSearching {
                 indexedComment = filterComments[indexPath.row]
-                
             } else {
                 indexedComment = comments[indexPath.row]
             }
