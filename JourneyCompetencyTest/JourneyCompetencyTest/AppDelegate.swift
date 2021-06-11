@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     //MARK:- Private Method
     private func setupRootViewController() {
-       //Setup Controller
+        //setup root controller
     }
     
 }
