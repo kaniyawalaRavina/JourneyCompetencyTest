@@ -16,6 +16,15 @@
 		7042D7AC2673548300979361 /* AlamofireHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7AB2673548300979361 /* AlamofireHelp.swift */; };
 		7042D7B92673568E00979361 /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7042D7B82673568E00979361 /* Post.storyboard */; };
 		7042D7BB2673570F00979361 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7BA2673570F00979361 /* Post.swift */; };
+		7042D7BD2673580200979361 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7BC2673580200979361 /* PostVC.swift */; };
+		7042D7C02673584E00979361 /* PostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7BE2673584E00979361 /* PostRouter.swift */; };
+		7042D7C12673584E00979361 /* PostRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7BF2673584E00979361 /* PostRouterInput.swift */; };
+		7042D7C42673586600979361 /* PostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7C22673586600979361 /* PostInteractor.swift */; };
+		7042D7C52673586600979361 /* PostInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7C32673586600979361 /* PostInteractorIO.swift */; };
+		7042D7C82673588F00979361 /* PostTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7C72673588F00979361 /* PostTableCell.swift */; };
+		7042D7CA267358A200979361 /* PostPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7C9267358A200979361 /* PostPresenter.swift */; };
+		7042D7CC267358B200979361 /* PostFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7CB267358B200979361 /* PostFactory.swift */; };
+		7042D7CE267358EB00979361 /* PostIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7CD267358EB00979361 /* PostIO.swift */; };
 		8929B27CF4C7AB39E526A6E6 /* Pods_JourneyCompetencyTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C113982065060A4551B5B4 /* Pods_JourneyCompetencyTestTests.framework */; };
 		C3068582A26F041011BF1EA6 /* Pods_JourneyCompetencyTest_JourneyCompetencyTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755532CDC842B111C7F3E6D3 /* Pods_JourneyCompetencyTest_JourneyCompetencyTestUITests.framework */; };
 		D75888FB483064B24CBFA0D8 /* Pods_JourneyCompetencyTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D5CFE507FC3FDE63D4F8AF /* Pods_JourneyCompetencyTest.framework */; };
@@ -58,6 +67,15 @@
 		7042D7AB2673548300979361 /* AlamofireHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHelp.swift; sourceTree = "<group>"; };
 		7042D7B82673568E00979361 /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
 		7042D7BA2673570F00979361 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		7042D7BC2673580200979361 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
+		7042D7BE2673584E00979361 /* PostRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRouter.swift; sourceTree = "<group>"; };
+		7042D7BF2673584E00979361 /* PostRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRouterInput.swift; sourceTree = "<group>"; };
+		7042D7C22673586600979361 /* PostInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostInteractor.swift; sourceTree = "<group>"; };
+		7042D7C32673586600979361 /* PostInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostInteractorIO.swift; sourceTree = "<group>"; };
+		7042D7C72673588F00979361 /* PostTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableCell.swift; sourceTree = "<group>"; };
+		7042D7C9267358A200979361 /* PostPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostPresenter.swift; sourceTree = "<group>"; };
+		7042D7CB267358B200979361 /* PostFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFactory.swift; sourceTree = "<group>"; };
+		7042D7CD267358EB00979361 /* PostIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIO.swift; sourceTree = "<group>"; };
 		755532CDC842B111C7F3E6D3 /* Pods_JourneyCompetencyTest_JourneyCompetencyTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JourneyCompetencyTest_JourneyCompetencyTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9048D173783AC3776B2893F4 /* Pods-JourneyCompetencyTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyCompetencyTestTests.release.xcconfig"; path = "Target Support Files/Pods-JourneyCompetencyTestTests/Pods-JourneyCompetencyTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		C026143E551A903DDF1F6997 /* Pods-JourneyCompetencyTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyCompetencyTestTests.debug.xcconfig"; path = "Target Support Files/Pods-JourneyCompetencyTestTests/Pods-JourneyCompetencyTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +249,8 @@
 		7042D7B42673555300979361 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				7042D7BE2673584E00979361 /* PostRouter.swift */,
+				7042D7BF2673584E00979361 /* PostRouterInput.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -238,6 +258,8 @@
 		7042D7B52673555900979361 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				7042D7C22673586600979361 /* PostInteractor.swift */,
+				7042D7C32673586600979361 /* PostInteractorIO.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -246,6 +268,9 @@
 			isa = PBXGroup;
 			children = (
 				7042D7B82673568E00979361 /* Post.storyboard */,
+				7042D7BC2673580200979361 /* PostVC.swift */,
+				7042D7CD267358EB00979361 /* PostIO.swift */,
+				7042D7C62673588F00979361 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,8 +278,18 @@
 		7042D7B72673556800979361 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				7042D7C9267358A200979361 /* PostPresenter.swift */,
+				7042D7CB267358B200979361 /* PostFactory.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7042D7C62673588F00979361 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7042D7C72673588F00979361 /* PostTableCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		ADB9057A30E0E3A6394EB746 /* Frameworks */ = {
@@ -505,10 +540,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7042D7CE267358EB00979361 /* PostIO.swift in Sources */,
+				7042D7C82673588F00979361 /* PostTableCell.swift in Sources */,
+				7042D7C42673586600979361 /* PostInteractor.swift in Sources */,
+				7042D7C12673584E00979361 /* PostRouterInput.swift in Sources */,
 				7042D7AC2673548300979361 /* AlamofireHelp.swift in Sources */,
 				7042D779267352F100979361 /* AppDelegate.swift in Sources */,
+				7042D7CA267358A200979361 /* PostPresenter.swift in Sources */,
+				7042D7CC267358B200979361 /* PostFactory.swift in Sources */,
 				7042D7AA2673546F00979361 /* Constants.swift in Sources */,
 				7042D7BB2673570F00979361 /* Post.swift in Sources */,
+				7042D7C02673584E00979361 /* PostRouter.swift in Sources */,
+				7042D7C52673586600979361 /* PostInteractorIO.swift in Sources */,
+				7042D7BD2673580200979361 /* PostVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

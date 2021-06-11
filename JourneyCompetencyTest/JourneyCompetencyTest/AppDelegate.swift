@@ -29,6 +29,12 @@ extension AppDelegate {
     //MARK:- Private Method
     private func setupRootViewController() {
         //setup root controller
+        let controller = PostFactory.shared.createModule()
+        let navigationViewController = UINavigationController(rootViewController: controller)
+        navigationViewController.viewControllers = [controller]
+        navigationViewController.navigationBar.prefersLargeTitles = true
+        self.window?.rootViewController = navigationViewController
+        self.window?.makeKeyAndVisible()
     }
     
 }
