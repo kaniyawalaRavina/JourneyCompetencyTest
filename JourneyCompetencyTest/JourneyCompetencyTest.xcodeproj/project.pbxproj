@@ -36,6 +36,7 @@
 		7042D7E62673672300979361 /* CommentsDetailsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7DC2673672300979361 /* CommentsDetailsRouterInput.swift */; };
 		7042D7E72673672300979361 /* CommentsDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7DD2673672300979361 /* CommentsDetailsRouter.swift */; };
 		7042D7E92673678600979361 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D7E82673678600979361 /* Comments.swift */; };
+		7042D80F26737CC100979361 /* PostInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7042D80E26737CC100979361 /* PostInteractorTests.swift */; };
 		8929B27CF4C7AB39E526A6E6 /* Pods_JourneyCompetencyTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1C113982065060A4551B5B4 /* Pods_JourneyCompetencyTestTests.framework */; };
 		C3068582A26F041011BF1EA6 /* Pods_JourneyCompetencyTest_JourneyCompetencyTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755532CDC842B111C7F3E6D3 /* Pods_JourneyCompetencyTest_JourneyCompetencyTestUITests.framework */; };
 		D75888FB483064B24CBFA0D8 /* Pods_JourneyCompetencyTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D5CFE507FC3FDE63D4F8AF /* Pods_JourneyCompetencyTest.framework */; };
@@ -98,6 +99,7 @@
 		7042D7DC2673672300979361 /* CommentsDetailsRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsDetailsRouterInput.swift; sourceTree = "<group>"; };
 		7042D7DD2673672300979361 /* CommentsDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsDetailsRouter.swift; sourceTree = "<group>"; };
 		7042D7E82673678600979361 /* Comments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		7042D80E26737CC100979361 /* PostInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostInteractorTests.swift; sourceTree = "<group>"; };
 		755532CDC842B111C7F3E6D3 /* Pods_JourneyCompetencyTest_JourneyCompetencyTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JourneyCompetencyTest_JourneyCompetencyTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9048D173783AC3776B2893F4 /* Pods-JourneyCompetencyTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyCompetencyTestTests.release.xcconfig"; path = "Target Support Files/Pods-JourneyCompetencyTestTests/Pods-JourneyCompetencyTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		C026143E551A903DDF1F6997 /* Pods-JourneyCompetencyTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyCompetencyTestTests.debug.xcconfig"; path = "Target Support Files/Pods-JourneyCompetencyTestTests/Pods-JourneyCompetencyTestTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				7042D78F267352F400979361 /* JourneyCompetencyTestTests.swift */,
+				7042D80E26737CC100979361 /* PostInteractorTests.swift */,
 				7042D791267352F400979361 /* Info.plist */,
 			);
 			path = JourneyCompetencyTestTests;
@@ -604,6 +607,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7042D80F26737CC100979361 /* PostInteractorTests.swift in Sources */,
 				7042D790267352F400979361 /* JourneyCompetencyTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
