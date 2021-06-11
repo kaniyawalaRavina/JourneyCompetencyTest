@@ -16,13 +16,29 @@ class PostVC: UIViewController {
     var output : PostViewOutput!
 
     var posts: [Post?] = []
-    
+    var filterPosts: [Post?] = []
+    var isSearching: Bool = false
+    @IBOutlet weak var searchTextField: UITextField!
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Post"
     }
     
+    @IBAction func textChangedForText(_ sender: Any) {
+        if searchTextField.text != "" {
+            isSearching = true
+        } else {
+            isSearching = false
+        }
+        //Search based on username and commented words
+        filterPosts = searchTextField.text?.isEmpty ?? true ? posts : posts.filter {
+            $0?.title?.range(of: searchTextField.text ?? "", options: .caseInsensitive) != nil
+            
+        }
+        print("comments count: \(filterPosts.count)")
+        postTableView.reloadData()
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -33,14 +49,24 @@ class PostVC: UIViewController {
 //MARK:- TableView Delegate
 extension PostVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        posts.count
+        if isSearching {
+            return filterPosts.count
+        } else {
+        return posts.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var indexedPost: Post?
+        if isSearching {
+            indexedPost = filterPosts[indexPath.row]
+        } else {
+            indexedPost = posts[indexPath.row]
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath)
-        cell.textLabel?.text = posts[indexPath.row]?.title
+        cell.textLabel?.text = indexedPost?.title
         cell.textLabel?.numberOfLines = 0
-        cell.detailTextLabel?.text = posts[indexPath.row]?.body
+        cell.detailTextLabel?.text = indexedPost?.body
         cell.detailTextLabel?.numberOfLines = 0
         return cell
     }

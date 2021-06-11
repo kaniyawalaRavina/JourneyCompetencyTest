@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IxY-Hm-ela">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <rect key="frame" x="0.0" y="55" width="414" height="763"/>
                                         <color key="backgroundColor" red="0.098713852470000002" green="0.2613527477" blue="0.282548666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="separatorColor" red="1" green="0.99215686270000003" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
@@ -55,13 +55,37 @@
                                             <outlet property="delegate" destination="2tE-de-RqT" id="0cX-dM-h0q"/>
                                         </connections>
                                     </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcG-4L-MXn">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search by post title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vBn-g2-aqA">
+                                                <rect key="frame" x="10" y="10.5" width="394" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textChangedForText:" destination="2tE-de-RqT" eventType="editingChanged" id="tBa-r9-6NW"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.098713852470000002" green="0.2613527477" blue="0.282548666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="3fi-Je-TwH"/>
+                                            <constraint firstItem="vBn-g2-aqA" firstAttribute="centerX" secondItem="lcG-4L-MXn" secondAttribute="centerX" id="Bum-79-SlD"/>
+                                            <constraint firstAttribute="trailing" secondItem="vBn-g2-aqA" secondAttribute="trailing" constant="10" id="QXw-lB-nqP"/>
+                                            <constraint firstItem="vBn-g2-aqA" firstAttribute="centerY" secondItem="lcG-4L-MXn" secondAttribute="centerY" id="fmq-M5-cCe"/>
+                                            <constraint firstItem="vBn-g2-aqA" firstAttribute="leading" secondItem="lcG-4L-MXn" secondAttribute="leading" constant="10" id="hW7-sy-0Ln"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="IxY-Hm-ela" secondAttribute="trailing" id="1RJ-0S-3aH"/>
                                     <constraint firstItem="IxY-Hm-ela" firstAttribute="leading" secondItem="0oD-6a-2P4" secondAttribute="leading" id="2yP-e0-K8E"/>
                                     <constraint firstAttribute="bottom" secondItem="IxY-Hm-ela" secondAttribute="bottom" id="9i8-Fb-G8X"/>
-                                    <constraint firstItem="IxY-Hm-ela" firstAttribute="top" secondItem="0oD-6a-2P4" secondAttribute="top" id="hfR-fQ-jEc"/>
+                                    <constraint firstItem="lcG-4L-MXn" firstAttribute="top" secondItem="0oD-6a-2P4" secondAttribute="top" id="DcP-zI-Gtr"/>
+                                    <constraint firstItem="IxY-Hm-ela" firstAttribute="top" secondItem="lcG-4L-MXn" secondAttribute="bottom" id="bBf-MO-zmX"/>
+                                    <constraint firstAttribute="trailing" secondItem="lcG-4L-MXn" secondAttribute="trailing" id="vEP-Ud-Bcl"/>
+                                    <constraint firstItem="lcG-4L-MXn" firstAttribute="leading" secondItem="0oD-6a-2P4" secondAttribute="leading" id="vFh-Fz-y2i"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -77,11 +101,12 @@
                     <navigationItem key="navigationItem" title="Post" id="N4d-Cr-5mf"/>
                     <connections>
                         <outlet property="postTableView" destination="IxY-Hm-ela" id="fTt-eA-GZa"/>
+                        <outlet property="searchTextField" destination="vBn-g2-aqA" id="wDO-kF-eaj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saL-Xk-CsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-793" y="-340"/>
+            <point key="canvasLocation" x="-794.20289855072474" y="-340.17857142857139"/>
         </scene>
     </scenes>
     <resources>
