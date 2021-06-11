@@ -1,5 +1,5 @@
 //
-//  PostVC.swift
+//  PostRouter.swift
 //  JourneyCompetencyTest
 //
 //  Created by Riya Kaniyawala on 11/06/21.
@@ -18,6 +18,7 @@ extension PostRouter : PostRouterInput {
     func openPostDetailsModule(post: Post?) {
 
         //Navigate to comments:
-        
+        let vc = CommentsDetailsFactory.shared.createModule(posts: post)
+        self.viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }
