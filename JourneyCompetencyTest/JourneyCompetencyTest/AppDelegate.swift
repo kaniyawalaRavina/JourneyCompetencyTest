@@ -29,6 +29,18 @@ extension AppDelegate {
     //MARK:- Private Method
     private func setupRootViewController() {
         //setup root controller
+        let controller = PostFactory.shared.createModule()
+        let navigationViewController = UINavigationController(rootViewController: controller)
+        navigationViewController.viewControllers = [controller]
+        navigationViewController.navigationBar.prefersLargeTitles = true
+        
+        navigationViewController.navigationBar.barTintColor = UIColor.white
+        navigationViewController.navigationBar.largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white
+            ]
+        navigationViewController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        self.window?.rootViewController = navigationViewController
+        self.window?.makeKeyAndVisible()
     }
     
 }
