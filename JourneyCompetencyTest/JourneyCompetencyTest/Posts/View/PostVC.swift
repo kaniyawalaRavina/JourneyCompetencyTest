@@ -33,20 +33,20 @@ class PostVC: UIViewController {
 //MARK:- TableView Delegate
 extension PostVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath)
-        cell.textLabel?.text = "title"
+        cell.textLabel?.text = posts[indexPath.row]?.title
         cell.textLabel?.numberOfLines = 0
-        cell.detailTextLabel?.text = "detail"
+        cell.detailTextLabel?.text = posts[indexPath.row]?.body
         cell.detailTextLabel?.numberOfLines = 0
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       //didselecr
+        output.didTouchPost(post: posts[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -60,7 +60,6 @@ extension PostVC : PostViewInput {
     
     func update(posts: [Post?]) {
         self.posts = posts
-        print("post\(posts)")
         postTableView.reloadData()
     }
 
