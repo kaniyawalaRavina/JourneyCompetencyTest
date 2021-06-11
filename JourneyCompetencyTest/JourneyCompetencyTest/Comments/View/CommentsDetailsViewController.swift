@@ -19,6 +19,8 @@ class CommentsDetailsViewController: UIViewController, UITextFieldDelegate {
     
     var post: Post?
     var comments: [Comments?] = []
+    var filterComments: [Comments?] = []
+    var isSearching: Bool = false
     
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -34,7 +36,18 @@ class CommentsDetailsViewController: UIViewController, UITextFieldDelegate {
     }
    
     @IBAction func searchTextDidChange(_ sender: Any) {
-       //searching
+        if searchTextField.text != "" {
+            isSearching = true
+        } else {
+            isSearching = false
+        }
+        //Search based on username and commented words
+        filterComments = searchTextField.text?.isEmpty ?? true ? comments : comments.filter {
+            $0?.name?.range(of: searchTextField.text ?? "", options: .caseInsensitive) != nil || $0?.body?.range(of: searchTextField.text ?? "", options: .caseInsensitive) != nil
+            
+        }
+        print("comments count: \(filterComments.count)")
+        tableView.reloadData()
     }
 }
 
@@ -57,8 +70,11 @@ extension CommentsDetailsViewController : UITableViewDelegate, UITableViewDataSo
         if section == CommentsDeailsSection.PostCommentsDetails.rawValue {
             return 1
         } else {
+            if isSearching {
+                return filterComments.count
+            } else {
             return comments.count
-            
+            }
         }
     }
     
@@ -70,7 +86,12 @@ extension CommentsDetailsViewController : UITableViewDelegate, UITableViewDataSo
             return cell
         } else {
             var indexedComment: Comments?
+            if isSearching {
+                indexedComment = filterComments[indexPath.row]
+                
+            } else {
                 indexedComment = comments[indexPath.row]
+            }
             if let cell = tableView.dequeueReusableCell(withIdentifier: "CommentsDetailCell", for: indexPath) as? CommentsDetailTableViewCell {
                 cell.commentsLabel.text = indexedComment?.body
                 cell.nameLabel.text = indexedComment?.name
@@ -88,3 +109,4 @@ extension CommentsDetailsViewController : CommentsDetailsViewInput {
         tableView.reloadData()
     }
 }
+
