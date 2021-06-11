@@ -6,3 +6,16 @@
 //
 
 import Foundation
+enum CommentsDeailsSection : Int , CaseIterable{
+    case PostCommentsDetails
+    case CommentsDetails
+    
+    func sectionTitle() -> String {
+        switch self {
+        case .PostCommentsDetails:
+            return "Post Detail"
+        case .CommentsDetails:
+            return "Comments Detail"
+        }
+    }
+}
